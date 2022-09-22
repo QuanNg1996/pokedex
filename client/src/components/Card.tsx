@@ -1,5 +1,5 @@
 
-import { Card, CardContent, CardMedia, Typography, CardActionArea } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, CardActionArea } from "@mui/material";
 
 interface PokemonData {
   pokemonName: string;
