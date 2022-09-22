@@ -3,7 +3,6 @@ import { Typography, Grid } from "@mui/material";
 
 import useFetch from "./hooks/useFetch";
 import Search from "./components/Search";
-
 interface PokemonResultProp {
   name: string;
   url: string;
