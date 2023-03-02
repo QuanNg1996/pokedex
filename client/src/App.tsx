@@ -1,8 +1,9 @@
 import { useState, lazy } from "react";
-import { Typography, Grid } from "@mui/material";
-
+import { Grid } from "@mui/material";
 import useFetch from "./hooks/useFetch";
 import Search from "./components/Search";
+import './style/index.css';
+
 interface PokemonResultProp {
   name: string;
   url: string;
@@ -16,9 +17,7 @@ const App = (): JSX.Element => {
 
   return (
     <>
-      <Typography align="center" variant="h1" sx={{ mt: 6 }}>
-        Pokedex
-      </Typography>
+      <h1 className="text-center text-5xl font-bold my-5">Pokedex</h1>
       <Search setFilterValue={setFilterValue} />
       <Grid container spacing={4} sx={{ padding: "0 20px 20px" }}>
         {pokemons && pokemons.results.filter(({ name }: PokemonResultProp) => name.includes(filterValue)).map(({ name, url }: PokemonResultProp) => (
